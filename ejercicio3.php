@@ -14,7 +14,7 @@ function letra($string, $var){
     //$verif = function($palabra) use ($var);
 
     $verif = strpos($string, $var);
-    return  $verif === false;
+    return $verif === false;
    
 }
 
