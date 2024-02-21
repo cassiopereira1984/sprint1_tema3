@@ -6,20 +6,23 @@ totes les paraules de l’array tenen el caràcter passat com a segon paràmetre
 Per exemple:
 
 Si tenim [“hola”, “Php”, “Html”] retornarà true si preguntem per “h” però fals si preguntem per “l”.*/
-$var = "a";
-$string = "hola";
-//$array = array("hola", "php", "html");
+$var = "h";
+$array = array("hola", "php", "html");
 
-function letra($string, $var){
-    //$verif = function($palabra) use ($var);
-
-    $verif = strpos($string, $var);
-    return $verif === false;
-   
+function letra($array, $var){
+    foreach($array as $verif) {
+        if (strpos($verif, $var) === false) {
+            return false;
+        }
+    }
+    return true;
 }
 
-//$resp = ($var == $array) ? "True" : "False";
-//return $resp;
-echo letra($string, $var);
+    if (letra($array, $var)) {
+        echo "Totas las palabras tienen la letra " . $var;
+    } else {
+        echo "No todas las palabras tienen la letra " . $var; 
+    }
 
+echo letra($array, $var);
 ?>
