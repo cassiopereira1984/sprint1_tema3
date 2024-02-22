@@ -13,4 +13,10 @@ echo $array["edat"] . "\n";
 echo $array["email"] . "\n";
 echo $array["menjar"];
 
+print_r($array);
+
+foreach ($array as $echo){
+    echo $echo . "\n";
+}
+
 ?>
